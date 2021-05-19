@@ -63,7 +63,7 @@ def func_readAllFilesAndAggregateData(
 ):
 	
 	filesToBeTreated = filedialog.askopenfilenames(
-		initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Load Reduction History",
+		initialdir="E:\\001_CMG\\NASA_ARIS_Data\\Results\\Load Reduction History",
 		title='Pick ship files that should be used for fleet total file'
 	)
 	

@@ -37,7 +37,7 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 import pyautogui
-import mpld3 as mp
+# import mpld3 as mp
 from playsound import playsound
 import numpy as np
 import inspect
@@ -51,16 +51,15 @@ useInitialDirs = True
 
 approximationLevel = 3
 
-totalSurfacesInJustOneGraph = 4
-forceToDoSimpleClassComparison = 1
+totalSurfacesInJustOneGraph = 2
+forceToDoSimpleClassComparison = 0
 
 zAxis_minPowerDemandInGraph = 2000
-zAxis_maxPowerDemandInGraph = 5000
+zAxis_maxPowerDemandInGraph = 4000
 
-flag_showNoOtherHeaderLineThanThisOne =  '' #\
-   # "Power Demand in Port Costa Diadema" + chr(10) + \
-   # "May 25 to June 1 = ~3.350kW (red surface)" + chr(10) + \
-   # "Nov 28 to Dec 6 = ~3.500kW (blue surface)"
+flag_showNoOtherHeaderLineThanThisOne = "Power Demand in Port Costa Diadema" + chr(10) + \
+   "May 8 to May 15 2020 = ~3.200kW (red surface)" + chr(10) + \
+   "May 8 to May 15 2021 = ~3.550kW (blue surface)"
 
 flag_commentFirstLineOfChartHeader = "" # "Power Demand in Port during normal operations"
 #"Power Demand in lay-up with only ~130 crew June 23 to June 30"
@@ -282,7 +281,7 @@ def func_defineSurfacePlotArea(
     print("shipNames[dict_shipAP[ship1]] " + shipNames[dict_shipAP["ship1"]])
     
     shipLongName = dict_shipShortCodesToLongNames[shipNames[dict_shipAP["ship1"]]]
-    if shipNames[dict_shipAP["ship2"]] is not "":
+    if shipNames[dict_shipAP["ship2"]] != "":
         shipLongNameInCaseOfComparison = dict_shipShortCodesToLongNames[shipNames[dict_shipAP["ship2"]]]
     
     if flag_printQuattroView:
@@ -298,7 +297,7 @@ def func_defineSurfacePlotArea(
     
     headerTitleDone = False
     
-    if shipNames[dict_shipAP["ship3"]] is not "" or forceToDoSimpleClassComparison:
+    if shipNames[dict_shipAP["ship3"]] != "" or forceToDoSimpleClassComparison:
     
         shipHeaderLine = np.empty(len(dict_shipAP) + 1, dtype=object)
         shipHeaderLine.fill('')
@@ -346,7 +345,7 @@ def func_defineSurfacePlotArea(
                             )
                     else:
                         if shipNames[dict_shipAP["ship1"]] == shipNames[dict_shipAP["ship2"]]:
-                            if plotAreaNumber is not 3:
+                            if plotAreaNumber != 3:
                                 ax.set_title(
                                     shipLongName + " Power Demand Port/Anchorage [kW] over Temperature and Enthalpy" + chr(10) +
                                     " Normal Business vs Period between " + timePeriod + chr(10) +
@@ -362,7 +361,7 @@ def func_defineSurfacePlotArea(
                                     "view from below the surfaces"
                                 )
                         else:
-                            if plotAreaNumber is not 3:
+                            if plotAreaNumber != 3:
                                 ax.set_title(
                                     flag_commentFirstLineOfChartHeader + chr(10) +
                                     shipLongName + " vs " + shipLongNameInCaseOfComparison + " Power Demand Port/Anchorage [kW] over Temperature and Enthalpy" + chr(10) +
@@ -886,7 +885,7 @@ def func_showPlotAndSaveScreenshotIfNeeded(
             else:
                 fileName = shipName + " Simple PWR DEMAND SURFACE.csv"
         
-        finalScreenshotName = "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\PNGs\\" + fileName
+        finalScreenshotName = "E:\\001_CMG\\NASA_ARIS_Data\\Results\\PNGs\\" + fileName
 
         finalScreenshotName = finalScreenshotName.replace("csv", 'png')
         
@@ -1078,7 +1077,7 @@ def func_readMainFile(
 ):
     if useInitialDirs:
         file = filedialog.askopenfilenames(
-            initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results",
+            initialdir="E:\\001_CMG\\NASA_ARIS_Data\\Results",
             title='Pick a file to show surface'
         )
     else:
@@ -1107,7 +1106,7 @@ def f_doTheExportOfThisLoadReductionHistory(
     # print(df_loadReductionHistory.head(5))
 
     fileName = \
-        "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Load Reduction History\\" + \
+        "E:\\001_CMG\\NASA_ARIS_Data\\Results\\Load Reduction History\\" + \
         shipNameThisFile + " Load-Reduction-Layup" + ".csv"
 
     print("save final file right here:" + fileName)
@@ -1207,7 +1206,7 @@ if totalSurfacesInJustOneGraph >= 9:
 if flag_print_BEFORE_and_DURING_LayUp:
     if useInitialDirs:
         filesToBeTreated = filedialog.askopenfilenames(
-            initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results",
+            initialdir="E:\\001_CMG\\NASA_ARIS_Data\\Results",
             title='Pick one file or many files during the lay up period'
         )
     else:

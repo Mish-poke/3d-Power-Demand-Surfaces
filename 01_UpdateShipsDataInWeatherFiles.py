@@ -23,7 +23,7 @@ from _CM_Include import *
 # 	,"AIDAbella": 				1
 # 	,"AIDAblu": 				1
 # 	,"AIDAsol": 				1
-# 	,"AIDAstella": 			1
+# 	,"AIDAstella": 				1
 # 	,"AIDAprima": 				1
 # 	,"AIDAperla": 				1
 # 	,"AIDAaura": 				1
@@ -31,93 +31,99 @@ from _CM_Include import *
 # 	,"AIDAnova": 				1
 # 	,"Costa Atlantica": 		0
 # 	,"Costa Deliziosa": 		0
-# 	,"Costa Diadema": 		0
+# 	,"Costa Diadema": 			0
 # 	,"Costa Fascinosa": 		0
-# 	,"Costa Favolosa": 		0
-# 	,"Costa Fortuna": 		0
-# 	,"Costa Luminosa": 		0
+# 	,"Costa Favolosa": 			0
+# 	,"Costa Fortuna": 			0
+# 	,"Costa Luminosa": 			0
 # 	,"Costa Magica": 			0
-# 	,"Costa Mediterranea": 	0
-# 	,"Costa Pacifica": 		0
+# 	,"Costa Mediterranea": 		0
+# 	,"Costa Pacifica": 			0
 # 	,"Costa Serena": 			0
-# 	,"Costa Venezia": 		0
-# 	,"Costa Smeralda": 		0
-# }
-# endregion
-
-# region FULL AIDA AND COSTA FLEET
-# dict_analyseTheseShips = {
-# 	"AIDAvita": 				1
-# 	,"AIDAdiva": 				1
-# 	,"AIDAluna": 				1
-# 	,"AIDAmar": 				1
-# 	,"AIDAbella": 				1
-# 	,"AIDAblu": 				1
-# 	,"AIDAsol": 				1
-# 	,"AIDAstella": 			1
-# 	,"AIDAprima": 				1
-# 	,"AIDAperla": 				1
-# 	,"AIDAaura": 				1
-# 	,"AIDAcara": 				1
-# 	,"AIDAnova": 				1
-# 	,"Costa Atlantica": 		1
-# 	,"Costa Deliziosa": 		1
-# 	,"Costa Diadema": 		1
-# 	,"Costa Fascinosa": 		1
-# 	,"Costa Favolosa": 		1
-# 	,"Costa Fortuna": 		1
-# 	,"Costa Luminosa": 		1
-# 	,"Costa Magica": 			1
-# 	,"Costa Mediterranea": 	1
-# 	,"Costa neoRomantica": 	1
-# 	,"Costa Pacifica": 		1
-# 	,"Costa Serena": 			1
-# 	,"Costa Venezia": 		1
-# 	,"Costa Smeralda": 		1
+# 	,"Costa Smeralda": 			0
+# 	,"Costa Toscana": 			0
+# 	,"Costa Firenze": 			0
+# 	,"Costa Venezia": 			0
 # }
 # endregion
 
 # region FULL AIDA AND COSTA FLEET
 dict_analyseTheseShips = {
-	"AIDAvita": 				0
-	,"AIDAdiva": 				0
-	,"AIDAluna": 				0
-	,"AIDAmar": 				0
-	,"AIDAbella": 				0
-	,"AIDAblu": 				0
-	,"AIDAsol": 				0
-	,"AIDAstella": 			0
-	,"AIDAprima": 				0
-	,"AIDAperla": 				0
-	,"AIDAaura": 				0
-	,"AIDAcara": 				0
-	,"AIDAnova": 				0
-	,"Costa Atlantica": 		0
-	,"Costa Deliziosa": 		0
-	,"Costa Diadema": 		0
-	,"Costa Fascinosa": 		0
-	,"Costa Favolosa": 		1
-	,"Costa Fortuna": 		0
-	,"Costa Luminosa": 		0
-	,"Costa Magica": 			0
-	,"Costa Mediterranea": 	0
-	,"Costa neoRomantica": 	0
-	,"Costa Pacifica": 		0
-	,"Costa Serena": 			0
-	,"Costa Venezia": 		0
-	,"Costa Smeralda": 		0
+	"AIDAaura": 				1
+	,"AIDAcara": 				1
+	,"AIDAvita": 				1
+	,"AIDAdiva": 				1
+	,"AIDAluna": 				1
+	,"AIDAmar": 				1
+	,"AIDAbella": 				1
+	,"AIDAblu": 				1
+	,"AIDAsol": 				1
+	,"AIDAstella": 				1
+	,"AIDAprima": 				1
+	,"AIDAperla": 				1
+	,"AIDAnova": 				1
+	,"Costa Atlantica": 		1
+	,"Costa Deliziosa": 		1
+	,"Costa Diadema": 			1
+	,"Costa Fascinosa": 		1
+	,"Costa Favolosa": 			1
+	,"Costa Fortuna": 			1
+	,"Costa Luminosa": 			1
+	,"Costa Magica": 			1
+	,"Costa Mediterranea": 		1
+	,"Costa neoRomantica": 		1
+	,"Costa Pacifica": 			1
+	,"Costa Serena": 			1
+	,"Costa Smeralda": 			1
+	,"Costa Toscana": 			1
+	,"Costa Firenze": 			1
+	,"Costa Venezia": 			1
 }
+# endregion
+
+# region FULL AIDA AND COSTA FLEET
+# dict_analyseTheseShips = {
+# 	"AIDAaura": 				0
+# 	,"AIDAcara": 				0
+# 	,"AIDAvita": 				0
+# 	,"AIDAdiva": 				0
+# 	,"AIDAluna": 				0
+# 	,"AIDAmar": 				0
+# 	,"AIDAbella": 				0
+# 	,"AIDAblu": 				0
+# 	,"AIDAsol": 				0
+# 	,"AIDAstella": 				0
+# 	,"AIDAprima": 				0
+# 	,"AIDAperla": 				0
+# 	,"AIDAnova": 				0
+# 	,"Costa Atlantica": 		1
+# 	,"Costa Deliziosa": 		0
+# 	,"Costa Diadema": 			0
+# 	,"Costa Fascinosa": 		0
+# 	,"Costa Favolosa": 			0
+# 	,"Costa Fortuna": 			0
+# 	,"Costa Luminosa": 			0
+# 	,"Costa Magica": 			0
+# 	,"Costa Mediterranea": 		0
+# 	,"Costa neoRomantica": 		0
+# 	,"Costa Pacifica": 			0
+# 	,"Costa Serena": 			0
+# 	,"Costa Smeralda": 			0
+# 	,"Costa Toscana": 			0
+# 	,"Costa Firenze": 			0
+# 	,"Costa Venezia": 			0
+# }
 # endregion
 
 dict_rawDataStructure = {
 	"sourceDataStructure_neptuneLab_RawData": 				0
 	,"sourceDataStructure_neptuneLab_preparedAverages": 	0
-	,"sourceDataStructure_PBI_preparedColumns": 				1
+	,"sourceDataStructure_PBI_preparedColumns": 			1
 }
 
 fileCopyBeforeSmartAlgo = '_BEFORE_SMART_ALGO_'
 
-masterPath_allShipsWeatherData = r'C:\Users\500095\Desktop\NASA_ARIS_Data\SHIPs\02 SHIP with OpenWeather\xx'
+masterPath_allShipsWeatherData = r'E:\001_CMG\NASA_ARIS_Data\SHIPs\02 SHIP with OpenWeather\xx'
 stringWeatherFileEnhancement = ' SHIP_and_OpenWeather.csv'
 
 # 'ShipCode;SOG;lastupdateutc;DG1POW;DG2POW;DG3POW;DG4POW;DG5POW;DG6POW;Latitude;Longitude;
@@ -161,39 +167,43 @@ dict_shipShortCodesToLongNames = dict(
 		('C-PA', 'Costa Pacifica'),
 		('C-SE', 'Costa Serena'),
 		('C-ME', 'Costa Smeralda'),
+		('C-TO', 'Costa Toscana'),
+		('C-FI', 'Costa Firenze'),
 		('C-VZ', 'Costa Venezia')
 	]
 )
 
 dict_shipShortCodesToLongNames_Reverse = dict(
 	[
-		('AIDAaura', 'A-AU'),
-		('AIDAcara', 'A-CA'),
-		('AIDAvita', 'A-VT'),
-		('AIDAbella', 'A-BE'),
-		('AIDAluna', 'A-LN'),
-		('AIDAdiva', 'A-DV'),
-		('AIDAblu', 'A-BL'),
-		('AIDAmar', 'A-MR'),
-		('AIDAsol', 'A-SL'),
-		('AIDAstella', 'A-ST'),
-		('AIDAprima', 'A-PM'),
-		('AIDAperla', 'A-PL'),
-		('AIDAnova', 'A-NV'),
-		('Costa Atlantica', 'C-AT'),
-		('Costa Deliziosa', 'C-DE'),
-		('Costa Diadema', 'C-DI'),
-		('Costa Favolosa', 'C-FA'),
-		('Costa Fascinosa', 'C-FS'),
-		('Costa Fortuna', 'C-FO'),
-		('Costa Luminosa', 'C-LU'),
-		('Costa Magica', 'C-MG'),
-		('Costa Mediterranea', 'C-MD'),
-		('Costa neoRomantica', 'C-NR'),
-		('Costa Pacifica', 'C-PA'),
-		('Costa Serena', 'C-SE'),
-		('Costa Smeralda', 'C-ME'),
-		('Costa Venezia', 'C-VZ')
+		('AIDAaura', 			'A-AU'),
+		('AIDAcara', 			'A-CA'),
+		('AIDAvita', 			'A-VT'),
+		('AIDAbella', 			'A-BE'),
+		('AIDAluna', 			'A-LN'),
+		('AIDAdiva', 			'A-DV'),
+		('AIDAblu', 			'A-BL'),
+		('AIDAmar', 			'A-MR'),
+		('AIDAsol', 			'A-SL'),
+		('AIDAstella', 			'A-ST'),
+		('AIDAprima', 			'A-PM'),
+		('AIDAperla', 			'A-PL'),
+		('AIDAnova', 			'A-NV'),
+		('Costa Atlantica', 	'C-AT'),
+		('Costa Deliziosa', 	'C-DE'),
+		('Costa Diadema', 		'C-DI'),
+		('Costa Favolosa', 		'C-FA'),
+		('Costa Fascinosa', 	'C-FS'),
+		('Costa Fortuna', 		'C-FO'),
+		('Costa Luminosa', 		'C-LU'),
+		('Costa Magica', 		'C-MG'),
+		('Costa Mediterranea', 	'C-MD'),
+		('Costa neoRomantica', 	'C-NR'),
+		('Costa Pacifica', 		'C-PA'),
+		('Costa Serena', 		'C-SE'),
+		('Costa Smeralda', 		'C-ME'),
+		('Costa Toscana', 		'C-TO'),
+		('Costa Firenze', 		'C-FI'),
+		('Costa Venezia', 		'C-VZ')
 	]
 )
 
@@ -208,7 +218,7 @@ def f_loopAllFilesInThisFolderAndCreateNewSumFile(
 	df1 = pd.DataFrame()
 	
 	filesToBeTreated = filedialog.askopenfilenames(
-		initialdir="C:\\Users\\500095\\Downloads\\ALL SHIPS DAILY DATA",
+		initialdir="C:\\Users\\TR@FI_02\\Downloads\\Automation Data",
 		title='PICK FILES FROM DAY BY DAY RAW DATA')
 	
 	useFilePicker = True

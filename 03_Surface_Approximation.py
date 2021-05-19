@@ -22,8 +22,6 @@ flag_timePeriod_approximationAfterLayUpStart = True
 flag_useFullPeriodSinceStartOfLayUp = False
 flag_LayUpSurfaceApproximationInDaysRolling = 7
 
-
-
 dict_layUpStartDate = {
     'A-BE': dt.datetime(2020, 3, 4, 0, 0, 0),
     'A-BL': dt.datetime(2020, 3, 15, 0, 0, 0),
@@ -88,6 +86,7 @@ dict_filterMinLoad_ORDINARY_Business = {
     'C-MG': 3750, #checked
     'C-MD': 3000, #checked
     'C-ME': 6000, #checked
+    'C-TO': 6000, #
     'C-PA': 4000, #checked
     'C-SE': 3750  #checked
 }
@@ -113,6 +112,7 @@ dict_filterMaxLoad = {
     'C-LU': 8750, #checked
     'C-MD': 5000, #checked
     'C-ME': 9000, #checked
+    'C-TO': 9000, #
     'C-MG': 7000, #checked
     'C-PA': 9000, #checked
     'C-SE': 8000  #checked
@@ -557,9 +557,10 @@ def func_exportFinalDataframe(
         if \
            flag_timePeriod_approximationBeforeLayUpStart and \
             not flag_timePeriod_approximationAfterLayUpStart:
-            
+
+            # "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Reference\\" + \
             fileName = \
-                "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Reference\\" + \
+                "E:\\001_CMG\\NASA_ARIS_Data\\Results\\Surfaces Reference\\" + \
                 shipShortCode + \
                 "_beforeLayUp_SHIP_NASA_surface_approximation.csv"
             
@@ -575,18 +576,21 @@ def func_exportFinalDataframe(
                 finalDayCounter = str(dayCounter)
             
             if flag_useFullPeriodSinceStartOfLayUp:
+                # "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Full Length\\" + \
                 fileName = \
-                    "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Full Length\\" + \
+                    "E:\\001_CMG\\NASA_ARIS_Data\\Results\Surfaces Layup Full Length\\" + \
                     shipShortCode + "_" + \
                     "duringLayUp_FullDataset_SHIP_NASA_surface_approximation.csv"
             else:
-                pathName = "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\" + shipShortCode + "\\" + str(flag_LayUpSurfaceApproximationInDaysRolling) + "-days"
+                # C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\
+                pathName = "E:\\001_CMG\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\" + shipShortCode + "\\" + str(flag_LayUpSurfaceApproximationInDaysRolling) + "-days"
                 if not os.path.exists(pathName):
                     print("sub folder for " + shipShortCode + " does not exist >> create folder")
                     os.mkdir(pathName)
-                
+
+                # "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\
                 fileName = \
-                    "C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\" + shipShortCode + "\\" + str(flag_LayUpSurfaceApproximationInDaysRolling) + "-days" + "\\" + \
+                    "E:\\001_CMG\\NASA_ARIS_Data\\Results\\Surfaces Layup Rolling\\" + shipShortCode + "\\" + str(flag_LayUpSurfaceApproximationInDaysRolling) + "-days" + "\\" + \
                     shipShortCode + "_" + \
                     str(flag_LayUpSurfaceApproximationInDaysRolling) + "_DayRolling_" + \
                     "_Day_" + str(finalDayCounter) + \
@@ -726,7 +730,7 @@ def find_polynomial_approximation_2d(
         np.linalg.lstsq(multi_vandermonde_matrix, array_z, rcond=None)
     
     amount_rows_in_df = len(data_df)
-    if residual:
+    if residual.size > 0:
         least_squared_error = residual/amount_rows_in_df
     else:
         least_squared_error = 'No information available.'
@@ -828,7 +832,7 @@ def func_readFileToBeTreated():
     root = tk.Tk()
     root.withdraw()
     file = filedialog.askopenfilenames(
-        initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
+        initialdir="E:\\001_CMG\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
         title='Pick a ship file to do the surface approximation'
     )
     
@@ -844,7 +848,7 @@ def func_readFileToBeTreated():
 
 # df_sourceData = func_readFileToBeTreated()
 listOfShipsToBeUpdated = filedialog.askopenfilenames(
-    initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
+    initialdir="E:\\001_CMG\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
     title='Pick a ship file to do the surface approximation'
 )
 

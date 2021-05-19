@@ -85,7 +85,8 @@ flag_openWeather_weather_icon = 'weather_icon'
 flag_openWeather_Enthalpy = 'Enthalpy'
 
 openWeatherMasterFilePath = \
-	r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_WithEnthalpy_WithoutDailyUpdateData.csv'
+	r'E:\001_CMG\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_WithEnthalpy_WithoutDailyUpdateData.csv'
+	# r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_WithEnthalpy_WithoutDailyUpdateData.csv'
 
 
 flag_owAPI_DayByDay_Ship = 'Ship'
@@ -103,10 +104,12 @@ flag_owAPI_DayByDay_ow_feelsLike = 'ow_feelsLike'
 flag_owAPI_DayByDay_ow_dt = 'ow_dt'
 
 openWeather_API_MasterFilePath = \
-	r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_RAW.csv'
+	r'E:\001_CMG\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_RAW.csv'
+	# r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_RAW.csv'
 
 openWeather_API_inclEnth_MasterFilePath = \
-	r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_inclEnthalpy.csv'
+	r'E:\001_CMG\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_inclEnthalpy.csv'
+	# r'C:\Users\500095\Desktop\NASA_ARIS_Data\OpenWeather\OpenWeather_MASTER_FILE_API_inclEnthalpy.csv'
 
 
 flag_owAPI_MasterFile_Ship = "Ship"
@@ -294,7 +297,7 @@ def func_readMasterFile(
 	root = tk.Tk()
 	root.withdraw()
 	file = filedialog.askopenfilenames(
-		initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
+		initialdir="E:\\001_CMG\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
 		title='Pick raw data that should be updated with weather data'
 	)
 	
@@ -936,7 +939,7 @@ def func_loopAllDayByDayFilesAndCreateNewSummaryFile():
 	df1 = pd.DataFrame()
 	
 	filesToBeTreated = filedialog.askopenfilenames(
-		initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\OpenWeather\\Daily_API_Updates",
+		initialdir="E:\\001_CMG\\NASA_ARIS_Data\\OpenWeather\\Daily_API_Updates\\DailyWeatherData",
 		title='pick files that you want to aggregate into the aggregated open weather file'
 	)
 	
@@ -1037,7 +1040,7 @@ if flag_ONLY_THIS_AddEnthalpyIntoOpenWeatherFile:
 if flag_ONLY_THIS_enhanceShipsRawDataWithWeatherData:
 	
 	listOfShipsToBeUpdated = filedialog.askopenfilenames(
-		initialdir="C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
+		initialdir="E:\\001_CMG\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather",
 		title='Pick raw data that should be updated with weather data'
 	)
 	
@@ -1060,7 +1063,7 @@ if flag_ONLY_THIS_enhanceShipsRawDataWithWeatherData:
 			df_thisShip = func_loopActualDataWithOpenWeather(df_thisShip, shipShortCode)
 			
 			fileName = \
-				"C:\\Users\\500095\\Desktop\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather\\" + \
+				"E:\\001_CMG\\NASA_ARIS_Data\\SHIPs\\02 SHIP with OpenWeather\\" + \
 				shipShortCode + " " + \
 				"SHIP_and_OpenWeather.csv"
 			

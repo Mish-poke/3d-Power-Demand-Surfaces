@@ -117,7 +117,7 @@ def func_readAllSelectedFilesAndExtractHourlyTimeStamps():
     df1 = pd.DataFrame()
     
     filesToBeTreated = filedialog.askopenfilenames(
-        initialdir="C:\\Users\\500095\\Downloads\\ALL SHIPS DAILY DATA",
+        initialdir="Downloads",
     )
     
     useFilePicker = True
