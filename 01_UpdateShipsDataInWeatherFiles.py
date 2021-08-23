@@ -14,6 +14,11 @@ import pandas as pd
 
 from _CM_Include import *
 
+dict_replaceTheseShortCodes = {
+    "J-AT": "C-AT",
+    "J-MD": "C-MD"
+}
+
 # region FULL AIDA FLEET
 # dict_analyseTheseShips = {
 # 	"AIDAvita": 				1
@@ -258,7 +263,12 @@ def f_loopAllFilesInThisFolderAndCreateNewSumFile(
 			flag_weatherData_Latitude,
 			flag_weatherData_Longitude
 		]]
-		
+
+		if flag_weatherData_Ship in df1.columns.unique():
+			for thisShortCode in dict_replaceTheseShortCodes:
+				print("replace ship short code: " + thisShortCode + " with " + dict_replaceTheseShortCodes[thisShortCode])
+				df1.loc[df1[flag_weatherData_Ship] == thisShortCode, flag_weatherData_Ship] = dict_replaceTheseShortCodes[thisShortCode]
+
 		df1 = df1.reset_index(drop=True)
 	# endregion
 	

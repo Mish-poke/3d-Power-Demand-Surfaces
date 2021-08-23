@@ -54,17 +54,16 @@ approximationLevel = 3
 totalSurfacesInJustOneGraph = 2
 forceToDoSimpleClassComparison = 0
 
-zAxis_minPowerDemandInGraph = 2000
-zAxis_maxPowerDemandInGraph = 4000
+zAxis_minPowerDemandInGraph = 4000
+zAxis_maxPowerDemandInGraph = 9000
 
-flag_showNoOtherHeaderLineThanThisOne = "Power Demand in Port Costa Diadema" + chr(10) + \
-   "May 8 to May 15 2020 = ~3.200kW (red surface)" + chr(10) + \
-   "May 8 to May 15 2021 = ~3.550kW (blue surface)"
+flag_showNoOtherHeaderLineThanThisOne = ''#"Power Demand in Port Costa Diadema" + chr(10) + \
+    # "June 20 to June 27 2020  = ~3.600kW (red surface)" + chr(10) + \
+    # "June 20 to June 27 2021 = ~3.700kW (blue surface)"
 
 flag_commentFirstLineOfChartHeader = "" # "Power Demand in Port during normal operations"
 #"Power Demand in lay-up with only ~130 crew June 23 to June 30"
 #"Power demand during port stay during normal operation before start of Layup" # "Normal Business 2019 until start of Lay-Up"
-
 
 
 flag_print_Temp_Ent_PWR = 0
@@ -73,10 +72,10 @@ flag_print_Temp_Ent_PWRSurface_per_Zone = 0
 filter_showThisClimateZoneOnly = 0
 
 
-flag_print_BEFORE_and_DURING_LayUp = 1
+flag_print_BEFORE_and_DURING_LayUp = 1 # set it
 flag_showOnlyMatchingSurfaces = 0
 
-flag_createFileWithLoadReductionHistory = 0
+flag_createFileWithLoadReductionHistory = 0 # set it both to True to create long term performance trend file
 DO_NOT_SHOW_ANY_GRAPH_ONLY_STATs = 0 # needed to create time series for lay up reporting
 
 flag_printQuattroView = 1

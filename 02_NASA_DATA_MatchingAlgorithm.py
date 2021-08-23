@@ -22,10 +22,10 @@ dict_updateWeatherDataFromThatFile = {
 }
 
 #TODO Step01 Daily after download of latest weather data >> create new RAW file with all exisiting weather data
-flag_ONLY_THIS_createNewFileWithDayByDayDataAggregation = 0
+flag_ONLY_THIS_createNewFileWithDayByDayDataAggregation = False
 
 #TODO Step02 Daily after download of latest weather data >> enhance new RAW data with Enthalpy and create final weather data api file with Enthalpy
-flag_ONLY_THIS_AddEnthalpyIntoOpenWeatherFile = 0
+flag_ONLY_THIS_AddEnthalpyIntoOpenWeatherFile = False
 
 flag_ONLY_THIS_createJustOneFileWithAllHistoricalLocations = False # was only needed when bulk download from openWeather was received
 flag_convertImperialToMetric = False

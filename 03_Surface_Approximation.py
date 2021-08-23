@@ -20,7 +20,7 @@ flag_timePeriod_approximationBeforeLayUpStart = False
 flag_timePeriod_approximationAfterLayUpStart = True
 
 flag_useFullPeriodSinceStartOfLayUp = False
-flag_LayUpSurfaceApproximationInDaysRolling = 7
+flag_LayUpSurfaceApproximationInDaysRolling = 14
 
 dict_layUpStartDate = {
     'A-BE': dt.datetime(2020, 3, 4, 0, 0, 0),
@@ -907,9 +907,7 @@ for df_thisShip in listOfShipsToBeUpdated:
                 (df_sourceData['lastupdateutc'] >= nextPeriodStart) & \
                 (df_sourceData['lastupdateutc'] < nextPeriodEnd)
             ]
-            
-            # print("LEN OF SUB DF: " + str(len(subDF['lastupdateutc'])))
-            
+
             if len(subDF['lastupdateutc']) > 250:
                 subDF = subDF.reset_index(drop=True)
                 
